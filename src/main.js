@@ -13,13 +13,13 @@ window.onload = async () => {
                 // If the same chain id is already registered, it will resolve and not require the user interactions.
                 await window.keplr.experimentalSuggestChain({
                     // Chain-id of the Cosmos SDK chain.
-                    chainId: "crypto-org-chain-mainnet-1",
+                    chainId: "cronosmainnet_25-1",
                     // The name of the chain to be displayed to the user.
-                    chainName: "Crypto.org Chain",
+                    chainName: "Cronos",
                     // RPC endpoint of the chain.
-                    rpc: "https://mainnet.crypto.org:26657",
+                    rpc: "https://rpc-cronos.crypto.org",
                     // REST endpoint of the chain.
-                    rest: "https://mainnet.crypto.org:1317",
+                    rest: "https://rest-cronos.crypto.org",
                     // Staking coin information
                     // (Currently, Keplr doesn't have the UI that shows multiple tokens, therefore this uses the SHELL token as the primary token althought SHELL is not a staking coin.)
                     stakeCurrency: {
@@ -28,7 +28,7 @@ window.onload = async () => {
                         // Actual denom (i.e. uatom, uscrt) used by the blockchain.
                         coinMinimalDenom: "basecro",
                         // # of decimal points to convert minimal denomination to user-facing denomination.
-                        coinDecimals: 8,
+                        coinDecimals: 18,
                         // (Optional) Keplr can show the fiat value of the coin if a coingecko id is provided.
                         // You can get id from https://api.coingecko.com/api/v3/coins/list if it is listed.
                         coinGeckoId: "crypto-com-chain"
@@ -40,7 +40,7 @@ window.onload = async () => {
                     bip44: {
                         // You can only set the coin type of BIP44.
                         // 'Purpose' is fixed to 44.
-                        coinType: 394,
+                        coinType: 60,
                     },
                     // Bech32 configuration to show the address to user.
                     // This field is the interface of
@@ -53,12 +53,12 @@ window.onload = async () => {
                     //   bech32PrefixConsPub: string;
                     // }
                     bech32Config: {
-                        bech32PrefixAccAddr: "cro",
-                        bech32PrefixAccPub: "cropub",
-                        bech32PrefixValAddr: "crocncl",
-                        bech32PrefixValPub: "crocnclpub",
-                        bech32PrefixConsAddr: "crocnclcons",
-                        bech32PrefixConsPub: "crocnclconspub"
+                        bech32PrefixAccAddr: "crc",
+                        bech32PrefixAccPub: "crcpub",
+                        bech32PrefixValAddr: "crccncl",
+                        bech32PrefixValPub: "crccnclpub",
+                        bech32PrefixConsAddr: "crccnclcons",
+                        bech32PrefixConsPub: "crccnclconspub"
                     },
                     // List of all coin/tokens used in this chain.
                     currencies: [{
@@ -67,7 +67,7 @@ window.onload = async () => {
                         // Actual denom (i.e. uatom, uscrt) used by the blockchain.
                         coinMinimalDenom: "basecro",
                         // # of decimal points to convert minimal denomination to user-facing denomination.
-                        coinDecimals: 8,
+                        coinDecimals: 18,
                         // (Optional) Keplr can show the fiat value of the coin if a coingecko id is provided.
                         // You can get id from https://api.coingecko.com/api/v3/coins/list if it is listed.
                         // coinGeckoId: ""
@@ -80,7 +80,7 @@ window.onload = async () => {
                         // Actual denom (i.e. uatom, uscrt) used by the blockchain.
                         coinMinimalDenom: "basecro",
                         // # of decimal points to convert minimal denomination to user-facing denomination.
-                        coinDecimals: 8,
+                        coinDecimals: 18,
                         // (Optional) Keplr can show the fiat value of the coin if a coingecko id is provided.
                         // You can get id from https://api.coingecko.com/api/v3/coins/list if it is listed.
                         // coinGeckoId: ""
